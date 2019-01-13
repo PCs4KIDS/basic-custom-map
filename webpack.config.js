@@ -48,9 +48,6 @@ var basicConfig = {
 var distConfig = Object.assign(basicConfig, distOutput);
 var demoConfig = Object.assign(basicConfig, demoOutput);
 
-console.log()
-
-
 module.exports = [
   distConfig, demoConfig
 ];

@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "Library to render basic custom maps",
   "main": "dist/basic-custom-map.min.js",
-  "types":"dist/types/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "lint": "tslint -c tslint.json 'src/**/*.ts",
     "compile": "webpack",
     "build": "npm run lint && npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "http-server demo -o",
-    "demo": "npm run build && npm run serve"
+    "demo": "npm run build && npm run serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d demo -r git@github.com:PCs4KIDS/basic-custom-map.git"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   "homepage": "https://github.com/pcs4kids/basic-custom-map#readme",
   "devDependencies": {
     "@types/snapsvg": "0.4.32",
+    "gh-pages": "2.0.1",
     "http-server": "0.11.1",
     "imports-loader": "0.8.0",
     "ts-loader": "4.4.2",
